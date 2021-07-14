@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="newEmp" class="com.demo.app.model.Employee">
+	
+		<constructor-arg name="employeeId" value="101"></constructor-arg>
+		<constructor-arg name="employeeName" value="Pooja"></constructor-arg>
+		<constructor-arg name="employeeSalary" value="10000"></constructor-arg>
+	
+	</bean>
+
+	<bean id="newEmp1" class="com.demo.app.model.Employee" autowire="byName">
+	
+		<property name="employeeId" value="102"></property>
+		<property name="employeeName" value="Bindu"></property>
+		<property name="employeeSalary" value="50000"></property>
+	
+	</bean>
+
+	<bean id="et" class="com.demo.app.model.EmployeeType">
+	
+		<property name="empType" value="Accountant"></property>
+
+	</bean>
+	
+	<bean id="p" class="com.demo.app.model.Project">
+	
+		<property name="pId" value="10"></property>
+		<property name="projectName" value="HDFC"></property>
+	
+	</bean>
+
+	
+</beans>
